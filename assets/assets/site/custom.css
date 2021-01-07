@@ -1,0 +1,77 @@
+@charset "UTF-8"; 
+body{
+    font-family: 'SolaimanLipi';
+}
+
+#book_id{
+    width: 100%;
+    height: 40px;
+    background: url(images/right-colum-top-bar-bg.jpg);
+    font-family: 'SolaimanLipi';
+}
+
+.myinputbox{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 20px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 270px;
+    font-family: 'SolaimanLipi';
+}
+
+
+
+.mytextarea{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 200px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 470px;
+    font-family: 'SolaimanLipi';
+}
+.sendbtn{
+    font-family: 'SolaimanLipi';
+    background-image: url("images/right-colum-top-bar-bg.jpg");
+    background-repeat: repeat-x;
+    color: #fff;
+    float: left;
+    height: 35px;
+    padding-top: 5px;
+    text-align: center;
+    width: 176px;
+    border: none;
+    float: right;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+hr{
+    color: #6BB130;
+    border: 0;
+    width: 95%;
+    background-color: #2D2D2D;
+    height: 1px;
+}
+.article-homepg h2{
+    line-height: 30px;
+    
+}
+p{
+    font-size: 20px;
+}

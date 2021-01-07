@@ -1,0 +1,20 @@
+body.external-page #main {
+//    background: url("../images/Spinning_globe_map.gif") no-repeat scroll center top;
+    overflow: hidden;
+}
+
+body.external-page #content .admin-form{
+    max-width: 400px;
+}
+
+.tray-bin {
+    background: none !important;
+}
+
+.btn{
+    text-transform: uppercase;
+}
+
+.admin-form {
+    font-size: 15px; 
+}
