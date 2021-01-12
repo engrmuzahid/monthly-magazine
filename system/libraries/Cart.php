@@ -129,7 +129,7 @@ class CI_Cart {
 	public function insert($items = array())
 	{
 		// Was any cart data passed? No? Bah...
-		if ( ! is_array($items) OR count($items=) == 0)
+		if(!is_array($items) OR count($items) == 0)
 		{
 			log_message('error', 'The insert method must be passed an array containing data.');
 			return FALSE;

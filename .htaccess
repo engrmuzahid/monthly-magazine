@@ -1,8 +1,6 @@
 RewriteEngine On
-RewriteBase / 
+RewriteBase /monthly-magazine/
 
-RewriteCond %{HTTPS} !=on
-RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
 
 RewriteCond %{REQUEST_URI} ^system.*
 RewriteRule ^(.*)$ index.php?/$1 [L]
