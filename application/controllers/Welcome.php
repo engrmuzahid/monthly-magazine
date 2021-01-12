@@ -17,7 +17,7 @@ class Welcome extends CI_Controller {
 		$data['site_info'] = $this->frontend_model->get_site_information();
 		$data['title'] = $data['site_info']->web_title;
 		$data['menus'] = $this->frontend_model->get_menu_list();
-        $data['categories'] = $this->frontend_model->get_all_category();
+      //  $data['categories'] = $this->frontend_model->get_all_category();
         $data['homepage_categories'] = $this->frontend_model->get_all_homepage_category();
         $data['notices'] = $this->frontend_model->get_all_notice_list();
         $data['sidebar_categories'] = '';
@@ -26,9 +26,9 @@ class Welcome extends CI_Controller {
         $data['old_items'] = $this->frontend_model->old_items();
         $condition = array("id" => $id);
         $data['bookinfo'] = $this->common_model->get_data_by_id("bookinfo", $condition);
-        $data['editor_article'] = $this->frontend_model->get_monthly_articles($id,3,0);
+     //   $data['editor_article'] = $this->frontend_model->get_monthly_articles($id,3,0);
         // $data['featured_articles'] = $this->frontend_model->get_featured_articles($id,4,3);
-        $data['monthly_articles'] = $this->frontend_model->get_monthly_articles($id,100,3);
+     //   $data['monthly_articles'] = $this->frontend_model->get_monthly_articles($id,100,3);
         $data['breadcumb_section'] = '';
         //$data['month_name'] = $this->load->view('frontend/month_name', $data, TRUE);
         $data['main_content'] = $this->load->view('frontend/index', $data, TRUE);

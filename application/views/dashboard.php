@@ -6,7 +6,7 @@
 
         <meta charset="utf-8">
 
-        <title>মাসিক আত-তাহরীক</title>
+        <title><?= appName; ?></title>
 
         <meta name="keywords" content="" />
 
@@ -336,7 +336,7 @@
 
                 <div class="navbar-branding">
 
-                    <a class="navbar-brand" href=""> <b>তাওহীদের ডাক</b>  </a>
+                    <a class="navbar-brand" href=""> <b><?= appName; ?></b>  </a>
 
                     <span id="toggle_sidemenu_l" class="glyphicons glyphicons-show_lines"></span>
 
@@ -406,7 +406,7 @@
 
                             <div class="panel-heading">
 
-                                <span class="panel-title text-info fw700"><i class="fa fa-pencil hidden"></i> সম্পাদনা পরিষদ</span>
+                                <span class="panel-title text-info fw700"><i class="fa fa-pencil hidden"></i> <?= appName; ?> </span>
 
                             </div>
 
@@ -414,113 +414,9 @@
 
 
 
-                                <div class="main-body-area">
-
-        	<div class="article-homepg">
-
-         
-
-              <span style="text-decoration:underline;color:#508424">সম্পাদক মন্ডলীর সভাপতি</span><br/>
-
-প্রফেসর ডঃ মুহাম্মাদ আসাদুল্লাহ আল-গালিব<br/>
-
-<br/>
-
-
-
-<span style="text-decoration:underline;color:#508424">সম্পাদক</span><br/>
-
-ডঃ মুহাম্মাদ সাখাওয়াত হোসাইন<br/>
-
-<br/>
-
-
-
-<span style="text-decoration:underline;color:#508424">সহকারী সম্পাদক</span><br/>
-
-ডঃ মুহাম্মাদ কাবীরুল ইসলাম<br/>
-
-<br/>
-
-
-
-<span style="text-decoration:underline;color:#508424">গবেষণা সহকারী</span><br/>
-
-ড. নূরুল ইসলাম
-
-              <br/>
-
-ড. আহমাদ আব্দুল্লাহ ছাকিব<br/>
-
-ড. আহমাদ আব্দুল্লাহ নাজীব <br/>
-
-<br/>
-
-
-
-<span style="text-decoration:underline;color:#508424">সার্কুলেশন ম্যানেজার</span><br/>
-
-মুহাম্মাদ কামরুল হাসান<br/>
-
-              </p>
-
-            <table width="500" border="0" cellspacing="0" cellpadding="0">
-
-  <tr>
-
-    <td width="153" height="40">
-
-    	
-
-    </td>
-
-    <td width="194"></td>
-
-    <td width="153">
-
-    	
-
-    </td>
-
-  </tr>
-
-  <tr>
-
-    <td>&nbsp;</td>
-
-    <td>&nbsp;</td>
-
-    <td>&nbsp;</td>
-
-  </tr>
-
-</table>
-
-       	  </div>
-
-            
-
-        	
-
-    </div> 
-
                             </div>
 
-                            <div class="panel-menu admin-form pn">
-
-                                <!-- Panel Break Field(Hidden) -->
-
-                                <label class="field prepend-icon hidden">
-
-                                    <input type="text" name="firstname" id="firstname" class="gui-input br-n br-b" placeholder="Add Network">
-
-                                    <label for="firstname" class="field-icon"><i class="fa fa-plus"></i> </label>
-
-                                </label>
-
-
-
-                            </div>
+                             
 
 
 

@@ -35,6 +35,17 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
+
+    <style>
+    :root {
+    --theme-color: <?= $site_info->h_bg_color; ?>;
+}
+
+:root {
+    --hover-color: <?php echo $site_info->c_bg_color; ?>;
+}
+
+    </style>
 </head>
 <body>
 <!--mobile-footer start-->
@@ -309,9 +320,21 @@
         </div>
     </div>
 </section>
-
+<?php echo $breadcumb_section; ?>
+<section class="main-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
 
 <?php echo $main_content; ?>
+
+<?php echo $right_sidebar; ?>
+
+</div>
+      <div class="row">
+      <?php echo $home_category_post; ?>
+      </div>
+    </div>
+</section>
 <div class="bottom-banner-widget">
     <div class="container-fluid">
         <div class="row">
@@ -342,8 +365,7 @@
     <i class="fa fa-arrow-up"></i>
 </div>
 <!--back to end-->
-<script src="<?php echo base_url(); ?>ikhlas_assets/js/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="<?php echo base_url(); ?>ikhlas_assets/js/jquery-3.3.1.min.js"></script> 
 <script src="<?php echo base_url(); ?>ikhlas_assets/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url(); ?>ikhlas_assets/js/custom.js"></script>
 

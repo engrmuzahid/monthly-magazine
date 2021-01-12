@@ -1,7 +1,8 @@
 <style>
     .new-category-post-design {
     overflow: hidden;
-    margin-bottom: 50px;
+    background: #fff;
+    padding: 30px;
 }
 
 .new-category-post-design .single-category-item {
@@ -35,7 +36,7 @@
     font-weight: 400;
 }
 </style>
-<div class="col-md-9 col-sm-12 default_margin">
+<div class="col-lg-9 col-sm-12 default_margin">
     <div class="new-category-post-design">
         <div class="row">
             <div class="col-md-12">

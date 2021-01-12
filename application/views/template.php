@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>আত-তাহরীক</title>
+        <title><?= appName; ?></title>
         <meta name="keywords" content="" />
         <meta name="description" content="">
         <meta name="author" content="Ginilab">
@@ -210,7 +210,7 @@
             <!-- Start: Header -->
             <header class="navbar navbar-fixed-top bg-light">
                 <div class="navbar-branding">
-                    <a class="navbar-brand" href="<?php echo site_url(); ?>"> <b> আত-তাহরীক </b></a>
+                    <a class="navbar-brand" href="<?php echo site_url(); ?>"> <b> <?= appName; ?></b></a>
                     <span id="toggle_sidemenu_l" class="glyphicons glyphicons-show_lines"></span>
                     <ul class="nav navbar-nav pull-right hidden">
                         <li>

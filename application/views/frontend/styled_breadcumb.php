@@ -3,6 +3,7 @@
         overflow: unset;
         background: #e2e3e5;
         color:#000;
+        padding-top:30px;
     }
     .styled_breadcumb a,.bread-artile-info p,.bread-artile-info p span{
          color:#000;
@@ -28,9 +29,9 @@
 <div class="styled_breadcumb">
     <!--<div class="shadow"></div>-->
 	<div class="breadcrumb-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-12">
                     <div>
                         <a href="<?php echo base_url('/'); ?>"><i class="fa fa-home"></i> মূলপাতা </a>
                         <span>></span>
