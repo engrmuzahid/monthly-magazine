@@ -1,14 +1,18 @@
 <div class="col-lg-3 order-lg-2 order-md-2 order-2">
     <?php if ($page_type == 'single_page') : ?>
-        <div class="post-section-title">
-            <h2>সর্বশেষ প্রবন্ধ</h2>
-        </div>
-        <div class="widget-cont">
-            <ul>
-                <?php foreach ($latest_articles as $article) : ?>
-                    <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><?php echo $article->title; ?></a></li>
-                <?php endforeach; ?>
-            </ul>
+
+        <div class="base-box">
+            <header class="nb-header" style="background:var(--theme-color);">
+                <h2 class="nb-title"><span>সর্বশেষ প্রবন্ধ</span></h2>
+            </header>
+
+            <div class="widget-cont">
+                <ul>
+                    <?php foreach ($latest_articles as $article) : ?>
+                        <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
         </div>
     <?php elseif ($page_type == 'writer_archive') : ?>
         <div class="post-section-title">
@@ -17,7 +21,7 @@
         <div class="widget-cont">
             <ul>
                 <?php foreach ($writer_list as $writer) : ?>
-                    <li><a href="<?php echo base_url('writer_archive/' . $writer->id); ?>"><?php echo $writer->writer_name; ?></a></li>
+                    <li><a href="<?php echo base_url('writer_archive/' . $writer->id); ?>"><i class="fa fa-user"></i><?php echo $writer->writer_name; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -39,14 +43,15 @@
         <div class="widget-cont">
             <ul>
                 <?php foreach ($sidebar_subjects as $subject) : ?>
-                    <li><a href="<?php echo base_url('subject_archive/' . $subject->id); ?>"><?php echo $subject->subject_name; ?></a></li>
+                    <li><a href="<?php echo base_url('subject_archive/' . $subject->id); ?>"><i class="fa fa-edit"></i> <?php echo $subject->subject_name; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
     <?php elseif ($page_type == 'monthly_archive') : ?>
-        <div class="post-section-title">
-            <h2>পুরাতন সংখ্যা</h2>
-        </div>
+        <div class="base-box">
+            <header class="nb-header" style="background:var(--theme-color);">
+                <h2 class="nb-title"><span>পুরাতন সংখ্যা</span></h2>
+            </header>
         <div class="old-number-posts">
             <div class="row">
                 <?php foreach ($old_items as $old_item) : ?>
@@ -60,39 +65,39 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-        </div>
+            </div> </div>
     <?php else : ?>
 
     <?php endif; ?>
     <?php if ($page_type !== 'monthly_archive') : ?>
-        <div class="post-section-title">
-            <h2>পুরাতন সংখ্যা</h2>
-        </div>
-
-        <div class="old-number-posts">
-            <div class="row">
-                <?php foreach ($old_items as $old_item) : ?>
-                    <div class="col-lg-6">
-                        <div class="single-item">
-                            <a href="<?php echo base_url('monthly_archive/' . $old_item->id); ?>">
-                                <img src="<?php echo base_url('assets/site/images/' . $old_item->cover_photo); ?>" alt="">
-                            </a>
-                            <h4><a href="<?php echo base_url('monthly_archive/' . $old_item->id); ?>"><?php echo $old_item->title; ?></a></h4>
+        <div class="base-box">
+            <header class="nb-header" style="background:var(--theme-color);">
+                <h2 class="nb-title"><span>পুরাতন সংখ্যা</span></h2>
+            </header>
+            <div class="old-number-posts">
+                <div class="row">
+                    <?php foreach ($old_items as $old_item) : ?>
+                        <div class="col-lg-6">
+                            <div class="single-item">
+                                <a href="<?php echo base_url('monthly_archive/' . $old_item->id); ?>">
+                                    <img src="<?php echo base_url('assets/site/images/' . $old_item->cover_photo); ?>" alt="">
+                                </a>
+                                <h5><a href="<?php echo base_url('monthly_archive/' . $old_item->id); ?>"><?php echo $old_item->title; ?></a></h5>
+                            </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="old-post-more-link" style="text-align: center;background:var(--theme-color);color:#fff;padding:10px;">
+                <a href="<?php echo base_url('monthly_archive'); ?>" class="ex-style text-center read-more">আরও</a>
             </div>
         </div>
-        <div class="old-post-more-link">
-            <a href="<?php echo base_url('monthly_archive'); ?>" class="ex-style text-center read-more">আরও</a>
-        </div>
-
     <?php endif; ?>
 
-    <div class="popular-post-section">
-        <div class="post-section-title">
-            <h2>সর্বাধিক পঠিত প্রবন্ধ</h2>
-        </div>
+    <div class="base-box">
+        <header class="nb-header" style="background:var(--theme-color);">
+            <h2 class="nb-title"><span>সর্বাধিক পঠিত প্রবন্ধ</span></h2>
+        </header>
         <div class="widget-cont">
             <ul>
                 <?php foreach ($important_articles as $article) : ?>
@@ -100,6 +105,8 @@
                 <?php endforeach; ?>
             </ul>
         </div>
+    </div>
+
         <?php if ($notices && !empty($page_type) && ($page_type == 'home_page' || $page_type == 'single_page')) : ?>
             <div class="notice-board">
 
@@ -115,22 +122,19 @@
             </div>
         <?php endif; ?>
         <?php if ($page_type !== 'single_page') : ?>
-            <div class="post-section-title">
-                <h2>সর্বশেষ প্রবন্ধ</h2>
-            </div>
-            <div class="widget-cont">
-                <ul>
-                    <?php foreach ($latest_articles as $article) : ?>
-                        <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
+
+            <div class="base-box">
+                <header class="nb-header" style="background:var(--theme-color);">
+                    <h2 class="nb-title"><span>সর্বশেষ প্রবন্ধ</span></h2>
+                </header>
+                <div class="widget-cont">
+                    <ul>
+                        <?php foreach ($latest_articles as $article) : ?>
+                            <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
             </div>
         <?php endif; ?>
-
-
-
     </div>
-
-
-    .
 </div>

@@ -18,7 +18,7 @@ Index Of Content
 */
 
 :root {
-    --theme-color: #3da13f;
+    --theme-color: #0d3602;
 }
 
 :root {
@@ -283,6 +283,50 @@ sidebar style start
     margin: 0;
     padding: 10px 0;
     background: url(../images/nb-dots.png) repeat;
+}
+
+.base-box,
+.sidebar .widget,
+.comment-form,
+div.bbp-template-notice,
+div.indicator-hint,
+#bbpress-forums fieldset.bbp-form legend {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 21px;
+    position: relative;
+    border-radius: 25px;
+}
+
+.nb-header {
+    background: #464343;
+    margin: -20px;
+    padding: 18px 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.nb-title {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    background: url(../images/nb-dots.png) repeat;
+    height: 16px;
+}
+
+.nb-header .nb-title a,
+.nb-header .nb-title span,
+.news-box .nb-header .nb-title span {
+    background: var(--theme-color);
+    color: #FFFFFF;
+    padding-right: 11px;
+    line-height: 20px;
+    float: left;
+    position: relative;
+    top: -3px;
 }
 
 .sidebar-widget {
@@ -722,6 +766,13 @@ footer section style start
 
 .mobile-footer ul li a:hover {
     text-decoration: none;
+}
+
+.archive-page,
+.default_margin {
+    background: #fff;
+    padding: 25px;
+    border: 1px solid var(--theme-color);
 }
 
 

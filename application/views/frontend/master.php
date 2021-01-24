@@ -331,7 +331,7 @@
 
 </div>
       <div class="row">
-      <?php echo $home_category_post; ?>
+      <?php echo isset($home_category_post) ?$home_category_post:""; ?>
       </div>
     </div>
 </section>

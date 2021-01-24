@@ -1,9 +1,10 @@
 <div class="col-lg-3 order-lg-0 order-md-3 order-3">
     <div class="left-sidebar-wrapper">
-        <div class="sidebar-widget">
-            <div class="sidebar-widget-title">
-                <h3><span> <?= $bookinfo->title; ?></span></h3>
-            </div>
+
+        <div class="base-box">
+            <header class="nb-header" style="background:var(--theme-color);">
+                <h2 class="nb-title"><a href="<?php echo base_url(); ?>monthly_archive/<?php echo $bookinfo->id; ?>" style="background:var(--theme-color);color:#fff"><?= $bookinfo->title; ?></a></h2>
+            </header>
             <div class="widget-cont">
                 <img src="<?php echo base_url('assets/site/images/' . $bookinfo->cover_photo); ?>" alt="" />
                 <div class="sidebar-action-btn">
@@ -26,21 +27,70 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <?php $articles = get_category_articles(4); ?>
+
+    <?php if (count($articles) > 0) : ?>
+
+
+        <div class="base-box">
+                <header class="nb-header" style="background:var(--theme-color);">
+                    <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/4" style="background:var(--theme-color);color:#fff"><?php echo category_name(4); ?> </a></h2>
+                </header>
+
+            <div class="widget-cont">
+                <div class="sidebar-post-list">
+                    <ul>
+                        <?php foreach ($articles as $article) : ?>
+
+                            <li><a href="<?php echo base_url('article_details/' . $article->id); ?>" style="font-size:17px;"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a>
+                            </li>
+
+
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <?php endif; ?>
+
+    <?php $articles = get_category_articles(7); ?>
+
+    <?php if (count($articles) > 0) : ?>
+
+
+        <div class="base-box">
+                <header class="nb-header" style="background:var(--theme-color);">
+                    <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/7" style="background:var(--theme-color);color:#fff"><?php echo category_name(7); ?> </a></h2>
+                </header>
+
+            <div class="widget-cont">
+                <div class="sidebar-post-list">
+                    <ul>
+                        <?php foreach ($articles as $article) : ?>
+
+                            <li><a href="<?php echo base_url('article_details/' . $article->id); ?>" style="font-size:17px;"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a>
+                            </li>
+
+
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <?php endif; ?>
+
 </div>
 
 <div class="col-lg-6 order-lg-1 order-md-0 order-0">
     <?php $editor_article = get_category_articles(1); ?>
     <?php if (count($editor_article) > 0) : ?>
         <div class="single-category-item">
-            <div class="post-wrapper">
-                <div class="sidebar-widget-title">
-                    <a href="<?php echo base_url(); ?>category_archive/1">
-                        <h3>
-                            <span><?php echo category_name(1); ?></span>
-                        </h3>
-                    </a>
-                </div>
-
+            <div class="base-box">
+                <header class="nb-header" style="background:var(--theme-color);">
+                    <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/1" style="background:var(--theme-color);color:#fff"><?php echo category_name(1); ?> </a></h2>
+                </header>
 
                 <div class="article-wrapper">
                     <div class="big-post-widget">
@@ -73,9 +123,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="all-post-link">
+                    <!-- <div class="all-post-link">
                         <a href="<?php echo base_url('article_details/' . $editor_article[0]->article_id); ?>">Show more</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -91,10 +141,11 @@
         <?php if (count($articles) > 0) : ?>
 
             <div class="col-lg-6">
-                <div class="post-wrapper">
-                    <div class="sidebar-widget-title">
-                        <h3><span> <?php echo category_name(2); ?></span></h3>
-                    </div>
+                <div class="base-box">
+                    <header class="nb-header" style="background:var(--theme-color);">
+                        <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/2" style="background:var(--theme-color);color:#fff"><?php echo category_name(1); ?> </a></h2>
+                    </header>
+
                     <div class="article-wrapper">
                         <div class="small-post-widget listview">
                             <ul>
@@ -123,20 +174,21 @@
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
 
         <?php endif; ?>
-        <?php $articles = get_category_articles(2); ?>
+        <?php $articles = get_category_articles(3); ?>
         <?php if (count($articles) > 0) : ?>
 
             <div class="col-lg-6">
-            <div class="post-wrapper">
-                    <div class="sidebar-widget-title">
-                        <h3><span> <?php echo category_name(2); ?></span></h3>
-                    </div>
+                <div class="base-box">
+                    <header class="nb-header" style="background:var(--theme-color);">
+                        <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/3" style="background:var(--theme-color);color:#fff"><?php echo category_name(3); ?> </a></h2>
+                    </header>
+
                     <div class="article-wrapper">
                         <div class="small-post-widget listview">
                             <ul>
@@ -165,40 +217,40 @@
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
         <?php endif; ?>
     </div>
 
-    
-    <?php $articles = get_category_articles(2); ?>
-  
+
+    <?php $articles = get_category_articles(8); ?>
+
     <?php if (count($articles) > 0) : ?>
 
-     
-  
-    <div class="sidebar-widget">
-        <div class="sidebar-widget-title">
-            <h3><?php echo category_name(2); ?></h3>
-        </div>
-        <div class="widget-cont">
-            <div class="sidebar-post-list">
-                <ul>
-                <?php foreach ($articles as $article) : ?>
-                    
-                    <li><a href="<?php echo base_url('article_details/' . $article->id); ?>" style="font-size:17px;"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a>
-                        </li>
 
-                          
-                <?php endforeach; ?>
-                   </ul>
+
+        <div class="base-box">
+            <header class="nb-header" style="background:var(--theme-color);">
+                <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/8" style="background:var(--theme-color);color:#fff"><?php echo category_name(8); ?> </a></h2>
+            </header>
+
+            <div class="widget-cont">
+                <div class="sidebar-post-list">
+                    <ul>
+                        <?php foreach ($articles as $article) : ?>
+
+                            <li><a href="<?php echo base_url('article_details/' . $article->id); ?>" style="font-size:17px;"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a>
+                            </li>
+
+
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-
-<?php endif; ?>
+    <?php endif; ?>
 
 
 
