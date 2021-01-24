@@ -46,6 +46,12 @@ function get_monthly_category_articles($month_id, $category_id) {
     return $data;
 }
 
+function category_name($id){
+    $ci = &get_instance();
+    $data = $ci->frontend_model->category_name_by_id($id);
+    return $data->name;
+}
+
 function get_five_articles($catid){
     $ci = &get_instance();
     $data = $ci->frontend_model->getFiveArticle($catid);

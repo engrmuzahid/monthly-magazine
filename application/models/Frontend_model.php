@@ -180,7 +180,7 @@ class Frontend_Model extends CI_Model {
         $magazine = $this->db->select('current_magazine_id')->get('contact')->row();
 	    $book_id = $magazine->current_magazine_id;
 	    
-	    $this->db->select('`article`.*,`writer`.*,`article`.id AS article_id') 
+	    $this->db->select('`article`.*,`writer`.id,writer.writer_name,`article`.id AS article_id') 
 		 ->from('article')
 		 ->join('writer', 'writer.id = article.writer_id')
 		 ->where(array('article.bookinfo_id' => $book_id, 'article.category_id' => $category_id))

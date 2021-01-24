@@ -282,6 +282,7 @@ sidebar style start
     font-size: 1.5em;
     margin: 0;
     padding: 10px 0;
+    background: url(../images/nb-dots.png) repeat;
 }
 
 .sidebar-widget {
@@ -378,9 +379,10 @@ post widget style start
 
 .post-wrapper {
     border: 1px solid var(--theme-color);
-    border-bottom: 2px solid var(--theme-color);
+    /* border-bottom: 2px solid var(--theme-color); */
     background: #fff;
     margin-bottom: 15px;
+    border-radius: 25px;
 }
 
 .post-section-title {
@@ -491,7 +493,7 @@ post widget style start
 .small-post-widget li {
     width: 50%;
     float: left;
-    border-bottom: 1px solid var(--theme-color);
+    /* border-bottom: 1px solid var(--theme-color); */
     padding: 15px;
 }
 

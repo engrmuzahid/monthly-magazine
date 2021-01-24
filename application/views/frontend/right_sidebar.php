@@ -96,7 +96,7 @@
         <div class="widget-cont">
             <ul>
                 <?php foreach ($important_articles as $article) : ?>
-                    <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><?php echo $article->title; ?></a></li>
+                    <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -121,7 +121,7 @@
             <div class="widget-cont">
                 <ul>
                     <?php foreach ($latest_articles as $article) : ?>
-                        <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><?php echo $article->title; ?></a></li>
+                        <li><a href="<?php echo base_url('article_details/' . $article->id); ?>"><i class="fa fa-edit"></i> <?php echo $article->title; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
