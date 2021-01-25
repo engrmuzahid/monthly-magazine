@@ -90,7 +90,7 @@ class Article extends CI_Controller {
                      );
                     $this->common_model->add_data("subject_relation",$assign_subjects_id);
                 }
-                print_r($subjects);exit();
+             //   print_r($subjects);exit();
 
                 echo 'DONE';
                 
