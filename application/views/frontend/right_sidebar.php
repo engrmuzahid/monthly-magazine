@@ -53,19 +53,25 @@
                 <h2 class="nb-title"><span>পুরাতন সংখ্যা</span></h2>
             </header>
         <div class="old-number-posts">
-            <div class="row">
+            <div class="row" style="margin-top:20px;">
+                
                 <?php foreach ($old_items as $old_item) : ?>
                     <div class="col-lg-6">
                         <div class="single-item">
                             <a href="<?php echo base_url('monthly_archive/' . $old_item->id); ?>">
                                 <img src="<?php echo base_url('assets/site/images/' . $old_item->cover_photo); ?>" alt="">
                             </a>
-                            <h4><a href="<?php echo base_url('monthly_archive/' . $old_item->id); ?>"><?php echo $old_item->title; ?></a></h4>
+                            <h5><a href="<?php echo base_url('monthly_archive/' . $old_item->id); ?>"><?php echo $old_item->title; ?></a></h5>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
-            </div> </div>
+            </div>
+            
+            <div class="old-post-more-link" style="text-align: center;background:var(--theme-color);color:#fff;padding:10px;">
+                <a href="<?php echo base_url('monthly_archive'); ?>" class="ex-style text-center read-more">আরও</a>
+            </div>
+         </div>
     <?php else : ?>
 
     <?php endif; ?>
@@ -75,7 +81,7 @@
                 <h2 class="nb-title"><span>পুরাতন সংখ্যা</span></h2>
             </header>
             <div class="old-number-posts">
-                <div class="row">
+            <div class="row" style="margin-top:20px;">
                     <?php foreach ($old_items as $old_item) : ?>
                         <div class="col-lg-6">
                             <div class="single-item">
