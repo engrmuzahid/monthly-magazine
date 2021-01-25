@@ -95,12 +95,16 @@ class Frontend_Model extends CI_Model {
 
     // tawhider dak function
 
-    function getArticle($catid) {
-        return $result = $this->db->select("*")
+    function getArticle($catid,$month=0){
+         $this->db->select("*")
                         ->from('article')
-                        ->where('category_id', $catid)
-                        ->order_by('sort_order', 'asc')
-                        ->get()->result();
+						->where('category_id', $catid);
+						if($month >0){
+							$this->db->where('article.bookinfo_id', $month)->order_by('sort_order', 'asc');
+						}else{
+							$this->db->order_by('sort_order', 'RANDOM');
+						}
+						return $result = $this->db->get()->result();
     }
 
     public function get_category_by_month($id){
@@ -270,11 +274,13 @@ class Frontend_Model extends CI_Model {
     }
 
     public function getArticleBySubject($id){
+	//	echo $month; exit;
         $this->db->select('article.*');
         $this->db->from('article');
         $this->db->join('subject_relation', 'subject_relation.article_id = article.id');
-        $this->db->where('subject_relation.subject_id', $id)
-    	 ->order_by("article.bookinfo_id","DESC");
+		$this->db->where('subject_relation.subject_id', $id);
+	
+		$this->db->order_by("article.bookinfo_id","DESC");
         $subjects = $this->db->get()->result();
         return $subjects;
     }

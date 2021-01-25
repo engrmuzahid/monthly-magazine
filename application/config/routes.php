@@ -52,7 +52,9 @@ $route['service_details/(.*)'] = 'Welcome/view_service_details/$1';
 
 $route['monthly_archive/(.*)'] = 'Welcome/monthly_archive/$1';
 $route['monthly_archive'] = 'Welcome/all_monthly_archive';
-$route['category_archive/(.*)'] = 'Welcome/get_all_article_by_category/$1';
+$route['category_archive/(:any)'] = 'Welcome/get_all_article_by_category/$1';
+$route['category_archive/(:any)/(:any)'] = 'Welcome/get_all_article_by_category/$1/$2';
+$route['category_archive/(:any)/(:any)/(:any)'] = 'Welcome/get_all_article_by_category/$1/$2/$3';
 $route['subject_archive/(.*)'] = 'Welcome/get_all_article_by_subject/$1';
 $route['writer_archive/(.*)'] = 'Welcome/get_all_article_by_writer/$1';
 //$route['search'] = 'Welcome/search_in_website';

@@ -218,7 +218,8 @@ of Bangladesh is directed to Salafi Path, based on pure Tawheed and Saheeh Sunna
 		$this->load->view('frontend/master', $data);
 	}
 
-	public function get_all_article_by_category($id){
+	public function get_all_article_by_category($id,$month=0,$show=0){
+	//echo $month;exit;
 	    $data['meta_desc'] = "";
 		$data['page_type'] = 'category_archive';
 		$data['site_info'] = $this->frontend_model->get_site_information();
@@ -231,7 +232,8 @@ of Bangladesh is directed to Salafi Path, based on pure Tawheed and Saheeh Sunna
 		$data['show_pdf_btn'] = FALSE;
         $data['old_items'] = $this->frontend_model->old_items();
 		$data['menus'] = $this->frontend_model->get_menu_list();
-		$data['category_articles'] = $this->frontend_model->getArticle($id);
+		$data['show_status'] = $show;
+		$data['category_articles'] = $this->frontend_model->getArticle($id,$month);
         $data['breadcumb_title'] = new stdClass();
         $data['breadcumb_title']->name =  $data['category_info']->name;
 		$data['title'] =  $data['category_info']->name.' - '.$data['site_info']->web_title;

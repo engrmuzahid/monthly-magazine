@@ -233,7 +233,7 @@
 
         <div class="base-box">
             <header class="nb-header" style="background:var(--theme-color);">
-                <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/8" style="background:var(--theme-color);color:#fff"><?php echo category_name(8); ?> </a></h2>
+                <h2 class="nb-title"><a href="<?php echo base_url(); ?>category_archive/8/<?= $articles[0]->bookinfo_id; ?>/1" style="background:var(--theme-color);color:#fff"><?php echo category_name(8); ?> </a></h2>
             </header>
 
             <div class="widget-cont">
