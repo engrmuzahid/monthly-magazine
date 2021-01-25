@@ -232,7 +232,7 @@ of Bangladesh is directed to Salafi Path, based on pure Tawheed and Saheeh Sunna
 		$data['show_pdf_btn'] = FALSE;
         $data['old_items'] = $this->frontend_model->old_items();
 		$data['menus'] = $this->frontend_model->get_menu_list();
-		$data['show_status'] = $show;
+		$data['show_status'] = $show; 
 		$data['category_articles'] = $this->frontend_model->getArticle($id,$month);
         $data['breadcumb_title'] = new stdClass();
         $data['breadcumb_title']->name =  $data['category_info']->name;
