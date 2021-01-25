@@ -67,8 +67,7 @@
                 <?php endforeach; ?>
             </div>
             </div>
-            
-            <div class="old-post-more-link" style="text-align: center;background:var(--theme-color);color:#fff;padding:10px;">
+                        <div class="old-post-more-link" style="text-align: center;background:var(--theme-color);color:#fff;padding:10px;">
                 <a href="<?php echo base_url('monthly_archive'); ?>" class="ex-style text-center read-more">আরও</a>
             </div>
          </div>
